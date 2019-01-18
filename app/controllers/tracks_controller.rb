@@ -10,11 +10,13 @@ class TracksController < ApplicationController
   # GET /tracks/1
   # GET /tracks/1.json
   def show
+    @track = Track.find params[:id]
+    
   end
 
   # GET /tracks/new
   def new
-     @track = current_user.tracks.build
+     @track = Track.new
   end
 
   # GET /tracks/1/edit
@@ -24,7 +26,7 @@ class TracksController < ApplicationController
   # POST /tracks
   # POST /tracks.json
   def create
-    @track = current_user.tracks.build(track_params)
+    @track = Track.new(track_params)
 
     respond_to do |format|
       if @track.save
@@ -40,6 +42,8 @@ class TracksController < ApplicationController
   # PATCH/PUT /tracks/1
   # PATCH/PUT /tracks/1.json
   def update
+    @track = current_user.tracks.save(track_params)
+
     respond_to do |format|
       if @track.update(track_params)
         format.html { redirect_to @track, notice: 'Track was successfully updated.' }
@@ -69,6 +73,6 @@ class TracksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def track_params
-      params.require(:track).permit(:title, :url)
+      params.require(:track).permit(:title, :url, :user_id)
     end
 end
