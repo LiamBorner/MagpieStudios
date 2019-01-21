@@ -11,7 +11,7 @@ class TracksController < ApplicationController
   # GET /tracks/1.json
   def show
     @track = Track.find params[:id]
-    
+
   end
 
   # GET /tracks/new
@@ -65,6 +65,8 @@ class TracksController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_track
@@ -73,6 +75,6 @@ class TracksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def track_params
-      params.require(:track).permit(:title, :url, :user_id)
+      params.require(:track).permit(:title, :url, :user_id, :track_file)
     end
 end
