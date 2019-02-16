@@ -24,3 +24,10 @@ Purpose-built analog/digital recording & production studio set in the idyllic Ke
 CSS grid 3 icons
 
 Access you tracks anywhere
+
+<!-- This is where all the controls will show if someone is an admin and logged in -->
+<div class="admin-controls">
+<% if current_user.try(:admin?) %>
+<ul><%= link_to 'View all tracks', admin_tracks_path %></ul>
+<% end %>
+</div>

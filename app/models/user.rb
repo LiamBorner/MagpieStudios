@@ -13,4 +13,8 @@ class User < ApplicationRecord
       self.role ||= :guest
     end
   end
+
+  def set_user
+    @user = current_user
+  end
 end

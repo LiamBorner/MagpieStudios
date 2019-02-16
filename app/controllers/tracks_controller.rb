@@ -4,8 +4,18 @@ class TracksController < ApplicationController
   # GET /tracks
   # GET /tracks.json
   def index
+    if current_user.try(:artist?)
+
     # @tracks = Track.all
     @tracks = current_user.tracks.all
+
+      else
+        respond_to do |format|
+          format.html { redirect_to root_path, notice: 'You must be logged in to view this page.' }
+          format.json { head :no_content }
+        end
+      end
+
   end
 
   # GET /tracks/1

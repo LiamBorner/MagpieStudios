@@ -1,11 +1,10 @@
 class AdminTracksController < ApplicationController
 
   before_action :set_track, only: [:show, :edit, :update, :destroy]
-  include Administrated
   # GET /tracks
   # GET /tracks.json
   def index
-    if current_user.admin?
+    if current_user.try(:admin?)
     @tracks = Track.all
   else
     respond_to do |format|
