@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tracks
+
+  enum role: [:guest, :artist, :admin]
+
+  after_initialize do
+    if self.new_record?
+      self.role ||= :guest
+    end
+  end
 end

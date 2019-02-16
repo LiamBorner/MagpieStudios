@@ -1,0 +1,31 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @track.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @track.url %>
+</p>
+
+<h2>Listen to a MP3 with HTML5 Audio</h2>
+<section>
+  <audio src= "<%= rails_blob_path(@track.track_file) %> " controls='controls'></audio>
+
+
+</section>
+
+
+
+
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
+
+<script>
+
+</script>

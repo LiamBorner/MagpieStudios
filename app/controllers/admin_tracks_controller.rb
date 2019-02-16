@@ -1,17 +1,25 @@
-class TracksController < ApplicationController
-  before_action :set_track, only: [:show, :edit, :update, :destroy]
+class AdminTracksController < ApplicationController
 
+  before_action :set_track, only: [:show, :edit, :update, :destroy]
+  include Administrated
   # GET /tracks
   # GET /tracks.json
   def index
-    # @tracks = Track.all
-    @tracks = current_user.tracks.all
+    if current_user.admin?
+    @tracks = Track.all
+  else
+    respond_to do |format|
+      format.html { redirect_to tracks_url, notice: 'You are not authorised to view this page.' }
+      format.json { head :no_content }
+    end
+  end
   end
 
   # GET /tracks/1
   # GET /tracks/1.json
   def show
     @track = Track.find params[:id]
+
 
   end
 
