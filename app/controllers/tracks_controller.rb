@@ -1,8 +1,12 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy]
 
+
   # GET /tracks
   # GET /tracks.json
+
+
+
   def index
     if current_user.try(:artist?)
 
@@ -21,17 +25,39 @@ class TracksController < ApplicationController
   # GET /tracks/1
   # GET /tracks/1.json
   def show
-    @track = Track.find params[:id]
-
+    if current_user.try(:admin?)
+  @track = Track.find(params[:id])
+    else
+  redirect_to root_path, notice: 'Thou Shalt Nought duuu dat :(' unless current_user.id == @track.user_id
+    end
   end
+
+    # if current_user.try(:artist?)
+    # @track = Track.find params[:id]
+    #
+    # else
+    #   respond_to do |format|
+    #     format.html { redirect_to root_path, notice: 'Oops, there is no track here.' }
+    #     format.json { head :no_content }
+    #   end
+    # end
+  # end
 
   # GET /tracks/new
   def new
+    if current_user.try(:admin?)
      @track = Track.new
+    else
+     redirect_to root_path, notice: 'You cannot create new tracks'
+   end
   end
 
   # GET /tracks/1/edit
   def edit
+    if current_user.try(:admin?)
+    else
+     redirect_to root_path, notice: 'You cannot edit tracks'
+    end
   end
 
   # POST /tracks
@@ -53,7 +79,9 @@ class TracksController < ApplicationController
   # PATCH/PUT /tracks/1
   # PATCH/PUT /tracks/1.json
   def update
-    @track = current_user.tracks.save(track_params)
+    # # @track = current_user.tracks(track_params)
+    # @track = current_user.tracks.find_by_id(params[:id])
+
 
     respond_to do |format|
       if @track.update(track_params)
