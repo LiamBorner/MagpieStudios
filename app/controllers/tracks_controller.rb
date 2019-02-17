@@ -28,7 +28,7 @@ class TracksController < ApplicationController
     if current_user.try(:admin?)
   @track = Track.find(params[:id])
     else
-  redirect_to root_path, notice: 'Thou Shalt Nought duuu dat :(' unless current_user.id == @track.user_id
+  redirect_to root_path, notice: 'You cannot access this track' unless current_user.id == @track.user_id
     end
   end
 
