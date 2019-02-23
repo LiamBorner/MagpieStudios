@@ -16,7 +16,6 @@
     <% @tracks.each do |track| %>
       <tr>
         <td><%= track.title %></td>
-        <td><%= track.url %></td>
         <td><%= track.user_id %></td>
         <td><%= link_to 'Show', track %></td>
         <td><%= link_to 'Edit', edit_track_path(track) %></td>
