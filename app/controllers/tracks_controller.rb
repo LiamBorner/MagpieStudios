@@ -60,6 +60,10 @@ class TracksController < ApplicationController
     end
   end
 
+  def download(&block)
+  service.download key, &block
+end
+
   # POST /tracks
   # POST /tracks.json
   def create
