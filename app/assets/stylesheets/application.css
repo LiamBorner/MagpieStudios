@@ -52,10 +52,16 @@
   color: #f1f1f1;
 }
 
+
 /* Style page content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+body {
+  height: 100%;
+  padding-left: none !important;
+  background-color: #edeff2;
+  font-family: Oswald, sans-serif;
+  color: rgba(0, 0, 0, .74);
+  font-size: 16px;
+  line-height: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -64,14 +70,6 @@
   .sidenav a {font-size: 18px;}
 }
 
-body {
-  background-color: #fff;
-  color: #000;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
 
 table {
   margin: auto;
@@ -90,4 +88,8 @@ td {
 th {
   text-align: center !important;
   padding: 0.5, 0.5, 0.5, 0.5 !important;
+}
+
+.container {
+  padding: 2rem;
 }

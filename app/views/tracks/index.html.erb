@@ -1,28 +1,11 @@
+<%= render "tracks/adminnav" %>
 <p id="notice"><%= notice %></p>
 
+<h2><%= current_user.name %>: Tracks</h2>
 
-<!-- <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav">
-    <div class="container-4 w-container"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463c663d86870ed41e9ce9_MAGPIESTUDIOSHI-RESwhite_d400-400x172.png" width="121" alt="" class="image-2" />
-        <div class="hamburger-button w-nav-button">
-            <div class="w-icon-nav-menu"></div>
-        </div>
-    </div>
-    <nav role="navigation" class="nav-menu w-nav-menu">
-      <a><%= link_to 'My tracks', tracks_path, class: 'nav-link' %></a>
-      <a><%= link_to "Edit my Profile", "#{edit_user_registration_path}", class: "nav-link" %></a>
-      <a><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></a>
-    </nav>
-    <div class="social-footer w-hidden-medium w-hidden-small w-hidden-tiny">
-        <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="15" alt="" /></a>
-        <a href="https://www.instagram.com/magpiestudioskent/" target="_blank" class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc904ae834fd8b_social-08-white.svg" width="17" alt="" /></a>
-        <a href="mailto:info@magpiestudioskent.com?subject=Contact%20from%20website" class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90381b34fd94_social-30-white.svg" width="17" alt="" /></a>
-    </div>
-</div> -->
-
-<h2 style=><%= current_user.name %>: Tracks</h2>
 <p>This is where you'll find all of your tracks</p>
 
-<table class="table table-dark" style="width:100%;">
+<table class="table table-dark table-hover" style="width:100%;">
   <thead>
     <tr>
       <th>Track name</th>
@@ -38,7 +21,7 @@
         <td><%= track.title %></td>
         <td><%= track.created_at  %></td>
         <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls'></audio></td>
-        <td><%= link_to 'Download', rails_blob_path(track.track_file) %> </td>
+        <td><%= link_to 'Download', rails_blob_path(track.track_file), class: 'nav-link' %> </td>
       </tr>
     <% end %>
   </tbody>
