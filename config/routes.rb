@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
 
 
-  root to: 'welcome#index2'
+  root to: 'welcome#index'
 
 end
