@@ -161,7 +161,6 @@ html, body {
 }
 
 button {
-  width: 30px;
   height: 30px;
   background: black;
 }
@@ -217,4 +216,27 @@ letter-spacing: 3px;
 color: #f0f0f0;
 font-size: 1rem;
 line-height: 1.5rem;
+}
+
+.card-services {
+  min-height: 320px;
+}
+
+.card-img-top {
+  position: relative;
+    left: 0%;
+    right: 0%;
+    float: none;
+    text-align: left;
+    justify-content: center;
+    max-height: 7rem;
+}
+
+.gallery {
+
+    background: #000;
+    float: left;
+    height: 24vw;
+    margin: 1%;
+    width: 23%;
 }
