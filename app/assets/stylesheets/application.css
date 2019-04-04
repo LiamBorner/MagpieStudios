@@ -16,40 +16,75 @@
 
 
 
- /* hero banner */
-.hero-banner {
-
-
-
+.div {
+  display: block;
 }
 
 
  /* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 300px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
+/* .sidenav {
+  /* height: 100%; /* Full-height: remove this if you want "auto" height */
+  /* width: 300px; /* Set the width of the sidebar */
+  /* position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  /* z-index: 1; /* Stay on top */
+  /* top: 0; /* Stay at the top */
+  /* left: 0; */
+  /* background-color: #111; /* Black */
+  /* overflow-x: hidden; /* Disable horizontal scroll */
+  /* padding-top: 20px; */
+/* } */
 
 /* The navigation menu links */
-.sidenav a {
+/* .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
-}
+} */
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+/* .sidenav a:hover {
   color: #f1f1f1;
+} */
+
+
+
+.nav-link {
+  display: block;
+  padding: 20px 0px;
+  color: #edeff2;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+
 }
+
+.main-banner-container {
+  position: relative;
+  color: white;
+  height: 100%;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-image {
+  height: auto;
+  width: auto;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+
 
 
 /* Style page content */
@@ -91,4 +126,95 @@ th {
 
 .container {
   padding: 2rem;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#sidebar, #content {
+  height: 100%;
+  overflow:auto;
+  float:left;
+  transition: width .35s;
+}
+
+#sidebar {
+  background:#000;
+  width: 30%;
+}
+
+#sidebar.collapsed {
+  width: 0;
+}
+
+#sidebar.collapsed + #content {
+  width: 100%;
+}
+
+#content {
+  background:gray;
+  width: 70%;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  background: black;
+}
+
+.hero-banner {
+      position: relative;
+      display: block;
+      height: 100%;
+      max-height: auto;
+      background-image: url(https://irp-cdn.multiscreensite.com/418effdf/dms3rep/multi/desktop/15590691_10155512098708942_8757120314579847317_o.jpg), linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+      background-position: 0px 0px, 0px 0px;
+      background-size: cover, auto;
+      font-family: Lato, sans-serif;
+}
+
+.hero-banner-wrapper {
+  position: relative;
+  top: 40%;
+  display: block;
+  overflow: visible;
+  margin-bottom: 0px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #000;
+  opacity: 0.79;
+  -webkit-transition: opacity 775ms ease;
+  transition: opacity 775ms ease;
+  text-align: center;
+}
+
+.hero-heading {
+  margin: 0rem 10px 19px;
+font-family: Lato, sans-serif;
+color: #fff;
+font-size: 2rem;
+line-height: 2rem;
+font-weight: 400;
+letter-spacing: 3px;
+
+}
+
+.hero-subheading {
+  margin-bottom: 25px;
+    font-family: Lato, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.hero-minorheading {
+  font-family: Lato, sans-serif;
+color: #f0f0f0;
+font-size: 1rem;
+line-height: 1.5rem;
 }
