@@ -1,11 +1,33 @@
+<div id="sidebar">
+  <div class="container" style="text-align: center">
+    <a class="navbar-brand" href="#">
+      <img src="app/assets/magpielogo.png"  class="logo" style="display:inline-block">
+    </a>
+  </div>
+  <ul>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><button><a href="/users/sign_in">Login</a></button></li>
+      <li><button><a href="/users/sign_up">Sign up</a></button></li>
+      <li><button><a href="/users/sign_out">Log out</a></button></li>
+
+  </ul>
+  <div class="container">
+    <div class="footer">
+        <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="25" height="25" alt="" /></a>
+        <a href="https://www.instagram.com/magpiestudioskent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc904ae834fd8b_social-08-white.svg" width="25" height="25" alt="" /></a>
+        <a href="mailto:info@magpiestudioskent.com?subject=Contact%20from%20website" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90381b34fd94_social-30-white.svg" width="25" height="25" alt="" /></a>
+    </div>
+  </div>
+  </div>
+
 <%= render "tracks/adminnav" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="container">
+  <div class="content" style="padding-top: 2rem;">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-10">
         <div class="card">
           <h2 class="card-header">Edit your Magpie Studios account</h2>
             <div class="card-body">
