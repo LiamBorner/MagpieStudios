@@ -25,78 +25,43 @@
   display: block;
 }
 
+.nav-top {
+  border-bottom: : 1px solid;
+  text-align: right;
+  height: 70px;
+  background-color: #000;
+}
 
- /* The sidebar menu */
-/* .sidenav {
-  /* height: 100%; /* Full-height: remove this if you want "auto" height */
-  /* width: 300px; /* Set the width of the sidebar */
-  /* position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  /* z-index: 1; /* Stay on top */
-  /* top: 0; /* Stay at the top */
-  /* left: 0; */
-  /* background-color: #111; /* Black */
-  /* overflow-x: hidden; /* Disable horizontal scroll */
-  /* padding-top: 20px; */
-/* } */
+.menu-top {
+  margin: 0 30px 0 0;
+  display: block!important;
+}
 
-/* The navigation menu links */
-/* .sidenav a {
-  padding: 6px 8px 6px 16px;
+.menu-left a {
+  margin: 0 30px 0 0;
+  display: block!important;
+  text-align: center;
+}
+
+.menu-top a {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-} */
-
-/* When you mouse over the navigation links, change their color */
-/* .sidenav a:hover {
-  color: #f1f1f1;
-} */
-
-body {
-  overflow-x: hidden;
+  color: gray;
+  margin: 0 10px;
+  line-height: 70px;
 }
 
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+label-hamburger {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none!important;
 }
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+#toggle {
+  display: none;
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
 
-#page-content-wrapper {
-  min-width: 100vw;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
-}
 
 .link {
   color: #e2a62b;
@@ -211,20 +176,13 @@ th {
 
 #sidebar {
   background:#000;
-  width: 30%;
+  width: 20%;
 }
 
-#sidebar.collapsed {
-  width: 0;
-}
-
-#sidebar.collapsed + #content {
-  width: 100%;
-}
 
 #content {
   background:000;
-  width: 70%;
+  width: 80%;
 }
 
 .footer {
@@ -487,9 +445,6 @@ Remove or comment-out the code block below to see how the browser will fall-back
 */
 
 @supports (display: grid) {
-
-
-
 
     .gallery {
         display: grid;

@@ -1,24 +1,26 @@
 
-      <div id="sidebar">
-
+      <div  id="sidebar">
 
         <div class="container" style="text-align: center">
           <a class="navbar-brand" href="#">
             <img src="assets/magpielogo.png"  class="logo" style="display:inline-block">
           </a>
         </div>
-        <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" id="about" data-scroll="about" class="nav-link">About</a></li>
-            <li><a href="#equipment" class="nav-link">Equipment</a></li>
-            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#contact" class="nav-link">Contact us</a></li>
-            <li><button><a href="/users/sign_in">Login</a></button></li>
-            <li><button><a href="/users/sign_up">Sign up</a></button></li>
-            <li><button><a href="/users/sign_out">Log out</a></button></li>
+        <div class="nav">
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle"/>
+            <div class="menu-left">
+                <a href="#home">Home</a
+                <a href="#about">About</a>
+                <a href="#equipment" >Equipment</a>
+                <a href="#testimonials" >Testimonials</a>
+                <a href="#gallery" >Gallery</a>
+                <a href="#contact" >Contact us</a>
+                <a href="/users/sign_in">Login</a>
+                <a href="/users/sign_up">Sign up</a>
+                <a href="/users/sign_out">Log out</a>
+              </div>
 
-        </ul>
         <div class="container">
           <div class="footer">
               <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="25" height="25" alt="" /></a>
@@ -26,12 +28,12 @@
               <a href="mailto:info@magpiestudioskent.com?subject=Contact%20from%20website" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90381b34fd94_social-30-white.svg" width="25" height="25" alt="" /></a>
           </div>
         </div>
+        </div>
       </div>
 
   <section id="content">
-  
 
-    <button id="toggle">&#9776;</button>
+
     <div class="hero-banner">
       <div class= "hero-banner-wrapper">
         <h1 class="hero-heading">Magpie Studios Kent</h1>
@@ -274,7 +276,7 @@
 
 
 
-<script>
+<!-- <script>
 
 window.onload=function(){
   const sidebar = document.getElementById('sidebar');
@@ -284,4 +286,4 @@ window.onload=function(){
     sidebar.classList.toggle('collapsed');
   });
 }
-</script>
+</script> -->
