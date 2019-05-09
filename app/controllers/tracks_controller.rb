@@ -121,6 +121,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def track_params
-      params.require(:track).permit(:title, :url, :user_id, :track_file)
+      params.require(:track).permit(:title, :user_id, :track_file)
     end
 end
