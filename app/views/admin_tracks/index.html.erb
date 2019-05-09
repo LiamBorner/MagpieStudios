@@ -1,8 +1,12 @@
-<%= render "tracks/adminnav" %>
+<%= render "layouts/usertopnav" %>
 
 <p id="notice"><%= notice %></p>
 
-<h1>Tracks: this is view of all tracks for Charlie</h1>
+<h1>Admin: tracks index</h1>
+
+<!-- can't work out how to get this to show -->
+<%= link_to 'New Track', new_track_path, class: 'button' %></a>
+
 
 <table class="table table-dark table-hover" style="width:100%;">
   <thead>
@@ -21,7 +25,7 @@
         <td><%= track.created_at  %></td>
         <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls'></audio></td>
         <td><%= link_to 'Show', track %></td>
-        <td><%= link_to 'Edit', edit_track_path(track) %></td>
+        <td><%= link_to 'Edit', edit_admin_track_path(track) %></td>
         <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Download', rails_blob_path(track.track_file) %> </td>
       </tr>
@@ -29,5 +33,5 @@
   </tbody>
 
 
+
 <br>
-  <%= link_to 'New Track', new_track_path %>
