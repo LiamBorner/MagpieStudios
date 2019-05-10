@@ -65,3 +65,4 @@ gem 'jquery-rails'
 gem 'cancancan', '~> 1.15'
 gem "pundit"
 gem 'instagram'
+gem 'css3-progress-bar-rails'
