@@ -69,7 +69,7 @@ ul {
   color: #e2a62b;
 }
 
-a:active {
+/* a:active {
   color: #e2a62b;
 }
 
@@ -79,7 +79,7 @@ a:hover {
 
 a:visited {
   color: #fff;
-}
+} */
 
 .logo {
   max-height: 7rem;

@@ -1,3 +1,6 @@
+<% if @admin | @artist %>
+<%= render "layouts/persistenttopnav" %>
+<% end %>
 
       <div  id="sidebar">
 
@@ -18,8 +21,10 @@
                 <a href="#contact" >Contact us</a>
                 <a href="/users/sign_in">Login</a>
                 <a href="/users/sign_up">Sign up</a>
-                <a href="/users/sign_out">Log out</a>
+                <a><%= link_to 'Log out', destroy_user_session_path, method: :delete %></a>
               </div>
+
+
 
         <div class="container">
           <div class="footer">

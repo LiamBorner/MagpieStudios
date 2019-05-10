@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="/">
+<nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark" style="position: absolute; position: absolute; width: 80%; margin-left:20%;">
+  <a class="navbar-brand" href="#">
     <img src="https://www.rspb.org.uk/globalassets/images/wildlife/birds/magpie/magpie-perched-in-hedgerow-titchwell-norfolk_by-ernie-janes_2078921-letterbox-crop.jpg" alt="Logo" style="width:40px;">
   </a>
   <ul class="navbar-nav ml-auto">
@@ -13,7 +13,7 @@
   <li style="padding: 0 1rem 0 1rem"><a><%= link_to 'My tracks', tracks_path %></a></li>
   <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Edit my Profile", "#{edit_user_registration_path}"%></a></li>
   <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Back to main site", root_path %></a></li>
-  <li style="padding: 0 1rem 0 1rem"><a><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></li>
+  <li style="padding: 0 1rem 0 1rem"><a><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></a></li>
 
 
      <% end %>
@@ -22,7 +22,7 @@
   <li style="padding: 0 1rem 0 1rem">  <a><%= link_to "View all tracks", "#{admin_tracks_path}"  %></a></li>
     <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Edit my Profile", "#{edit_user_registration_path}" %></a></li>
     <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Back to main site", root_path %></a></li>
-    <li style="padding: 0 1rem 0 1rem"><a><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></li>
+    <li style="padding: 0 1rem 0 1rem"><a><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></a></li>
 
   <% end %>
   </ul>
