@@ -22,7 +22,9 @@
    scroll-behavior: smooth;
  }
 
-
+.mobile-nav {
+  visibility: hidden;
+}
 
 .nav-top {
   text-align: right;
@@ -499,13 +501,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar {
-    text-align: center;
-    float: none;
-    display: none;
-  }
-}
+
 
 .persistent-nav {
     position: absolute;
@@ -514,4 +510,20 @@ Remove or comment-out the code block below to see how the browser will fall-back
     background-color: #000;
     height: 3rem;
 }
+}
+
+@media screen and (max-width: 400px) {
+  #sidebar {
+    text-align: center;
+    float: none;
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  .mobile-nav {
+    visibility: visible;
+  }
 }

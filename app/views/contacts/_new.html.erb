@@ -4,7 +4,7 @@
 
 
 <div id="contact">
-  <%= form_for @contact do |f| %>
+  <%= form_for Contact.new do |f| %>
   <div class="form-group">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "email", class: "form-control", :required => true  %>

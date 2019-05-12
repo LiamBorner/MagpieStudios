@@ -2,6 +2,24 @@
 <%= render "layouts/persistenttopnav" %>
 <% end %>
 
+<div class="mobile-nav">
+  <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #000;">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
+    </a>
+    <ul class="navbar-nav ml-auto">
+    <% if @logged_out %>
+    <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Sign up", "#{new_user_registration_path}" %></a></li>
+    <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Login", "#{user_session_path}" %></a></li>
+    <% end %>
+
+
+
+    </ul>
+       </nav>
+
+
+</div>
       <div  id="sidebar">
 
         <div style="text-align: center;">
@@ -9,6 +27,9 @@
             <img src="/assets/magpielogo.png"  class="logo" style="display:inline-block;">
           </a>
         </div>
+
+
+
 
         <div style="text-align: center;" >
           <label for="toggle">&#9776;</label>
@@ -232,37 +253,9 @@
       </div>
 
   </section>
-
-
-  <section class="section-block">
-  <h2>Get in touch</h2>
-  <div>All projects at Magpie Studios Kent are of the highest fidelity at an affordable rate. If you need anymore information or would like to talk about your project, get in contact via the form below. We look forward to working with you.</div>
-
-
-  <div id="contact">
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="name" class="form-control" id="name" placeholder="Enter your name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="phone_number">Phone number</label>
-        <input type="name" class="form-control" id="phone">
-      </div>
-
-      <div class="form-group">
-        <label for="message">Your message</label>
-        <textarea class="form-control" id="message" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  </div>
-  </section>
+<section>
+<%= render "contacts/new" %>
+</section>
 
 
 
