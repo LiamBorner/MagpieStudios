@@ -66,3 +66,4 @@ gem 'cancancan', '~> 1.15'
 gem "pundit"
 gem 'instagram'
 gem 'css3-progress-bar-rails'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'

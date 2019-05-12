@@ -22,9 +22,7 @@
    scroll-behavior: smooth;
  }
 
-.div {
-  display: block;
-}
+
 
 .nav-top {
   border-bottom: : 1px solid;
@@ -74,6 +72,10 @@ a {
 a:hover {
   color: #e2a62b;
   text-decoration: none;
+}
+
+.hidden  {
+  display: none;
 }
 
 button {
