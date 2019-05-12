@@ -97,7 +97,7 @@ Rails.application.configure do
 
 
   #this will need to be Charlie's email
-  config.action_mailer.default_url_options = { host: 'https://magpiestudios.herokuapp.com/'' }
+  config.action_mailer.default_url_options = { host: 'https://magpiestudios.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
