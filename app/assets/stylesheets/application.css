@@ -39,9 +39,10 @@
 }
 
 .menu-left a {
-  margin: 0 30px 0 0;
+  margin: 0 0 0 0;
   display: block!important;
   text-align: center;
+  line-height: 2rem;
 }
 
 .menu-top a {
@@ -66,6 +67,24 @@ ul {
   font-size: 1rem;
 }
 
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #e2a62b;
+  text-decoration: none;
+}
+
+button {
+  background-color: #e2a62b;
+  font-size: 2rem;
+}
+
+button:hover {
+  color: #000;
+}
+
 .link {
   color: #e2a62b;
 }
@@ -83,8 +102,7 @@ a:visited {
 } */
 
 .logo {
-  max-height: 7rem;
-  text-align: center;
+  width: 100%;
 }
 
 .nav-link {
@@ -142,12 +160,17 @@ body {
 }
 
 
-
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
 
 table {
   margin: auto;
   width: 60%;
   padding: 1.5rem;
+  background-color: #000;
 }
 
 
@@ -156,11 +179,13 @@ td {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
   text-align: center;
+  text-color: #fff;
 }
 
 th {
   text-align: center !important;
   padding: 0.5, 0.5, 0.5, 0.5 !important;
+  text-color: #fff;
 }
 
 .container {
@@ -174,7 +199,7 @@ th {
   height: 100%;
   overflow:auto;
   float:left;
-  transition: width .35s;
+  /* transition: width .35s; */
 }
 
 #sidebar {
@@ -184,23 +209,20 @@ th {
 
 
 #content {
-  background:000;
+
   width: 80%;
 }
 
 .footer {
 height:40px;
-width:30%;
+width:20%;
     position:absolute;
     bottom:0;
 text-align: center;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
+
 
 .hero-banner {
       position: relative;
@@ -460,3 +482,34 @@ Remove or comment-out the code block below to see how the browser will fall-back
         width: auto;
         margin: 0;
     }
+
+
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar {
+    text-align: center;
+    float: none;
+    display: none;
+  }
+}
+
+.persistent-nav {
+    position: absolute;
+    width: 80%;
+    margin-left: 20%;
+    background-color: #000;
+    height: 3rem;
+}

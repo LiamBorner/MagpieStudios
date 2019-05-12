@@ -4,12 +4,13 @@
 
       <div  id="sidebar">
 
-        <div class="container" style="text-align: center">
+        <div style="text-align: center;">
           <a class="navbar-brand" href="#">
-            <img src="assets/magpielogo.png"  class="logo" style="display:inline-block">
+            <img src="/assets/magpielogo.png"  class="logo" style="display:inline-block;">
           </a>
         </div>
-        <div class="nav">
+
+        <div style="text-align: center;" >
           <label for="toggle">&#9776;</label>
           <input type="checkbox" id="toggle"/>
             <div class="menu-left">
@@ -21,12 +22,11 @@
                 <a href="#contact" >Contact us</a>
                 <a href="/users/sign_in">Login</a>
                 <a href="/users/sign_up">Sign up</a>
-                <a><%= link_to 'Log out', destroy_user_session_path, method: :delete %></a>
               </div>
 
 
 
-        <div class="container">
+        <div>
           <div class="footer">
               <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="25" height="25" alt="" /></a>
               <a href="https://www.instagram.com/magpiestudioskent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc904ae834fd8b_social-08-white.svg" width="25" height="25" alt="" /></a>
@@ -44,7 +44,7 @@
         <h1 class="hero-heading">Magpie Studios Kent</h1>
         <h1 class="hero-subheading">Analog | Digital Hybrid Recording & Production Studio in Kent</h1>
         <h3 class="hero-minorheading">Creating your record is easy with our experience producers and engineers</h3>
-        <button><a href="#contact" class="button">Contact us</a></button>
+        <a class="btn btn-warning btn-lg" href="#contact" role="button">Contact us</a>
       </div>
   </div>
 

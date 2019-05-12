@@ -6,27 +6,4 @@
 
 <p>This is where you'll find all of your tracks</p>
 
-<table class="table table-dark table-hover" style="width:100%;">
-  <thead>
-    <tr>
-      <th>Track name</th>
-      <th>Uploaded at</th>
-      <th></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tracks.each do |track| %>
-      <tr>
-        <td><%= track.title %></td>
-        <td><%= track.created_at  %></td>
-        <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls'></audio></td>
-        <td><%= link_to 'Download', rails_blob_path(track.track_file), class: 'nav-link' %> </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<br>
+<%= render "layouts/tracklist" %>
