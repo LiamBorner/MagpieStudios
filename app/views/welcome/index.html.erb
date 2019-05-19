@@ -1,25 +1,6 @@
-<% if @admin | @artist %>
-<%= render "layouts/persistenttopnav" %>
-<% end %>
-
-<div class="mobile-nav">
-  <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #000;">
-    <a class="navbar-brand" href="/">
-      <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
-    </a>
-    <ul class="navbar-nav ml-auto">
-    <% if @logged_out %>
-    <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Sign up", "#{new_user_registration_path}" %></a></li>
-    <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Login", "#{user_session_path}" %></a></li>
-    <% end %>
 
 
 
-    </ul>
-       </nav>
-
-
-</div>
       <div  id="sidebar">
 
         <div style="text-align: center;">
