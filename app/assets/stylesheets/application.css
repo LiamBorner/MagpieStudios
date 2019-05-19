@@ -25,6 +25,8 @@
    scroll-behavior: smooth;
  }
 
+
+
 .mobile-nav {
   visibility: hidden;
 }
@@ -121,6 +123,7 @@ a:visited {
 
 .logo {
   width: 100%;
+  align-self: center;
 }
 
 .nav-link {
@@ -186,9 +189,9 @@ p, ol, ul, td {
 
 table {
   margin: auto;
-  width: 60%;
   padding: 1.5rem;
   background-color: #000;
+  width: 100%;
 }
 
 th {
@@ -208,7 +211,11 @@ td {
   color: #fff !important;
 }
 
-
+/* .audio {
+  width: 220px;
+  display: block;
+  margin:20px;
+} */
 
 .container {
   padding: 2rem;
@@ -254,15 +261,23 @@ text-align: center;
     align-items: center;
 
     /* Text styles */
+    padding-top: 5rem;
     text-align: center;
     color: white; /* ADD THIS LINE */
 
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg');
+    background-image: url(/assets/herobanner.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+}
+
+.hero-inner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .hero h1 {
@@ -272,18 +287,24 @@ text-align: center;
     /* Margins */
     margin-top: 0;
     margin-bottom: 0.5rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .hero h2 {
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
 }
 
 .hero h3 {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
 }
 
 .hero .btn {
@@ -309,6 +330,34 @@ text-align: center;
 
 }
 
+.btn-white {
+    /* Positioning and sizing */
+    display: block;
+    width: 100px;
+
+    /* Padding and margins */
+    padding: 1rem;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Text styles */
+    color: white; /* CHANGE THIS LINE */
+    text-decoration: none;
+    font-size: 1rem;
+
+    /* Border styles */
+    border: 1.5px solid white; /* CHANGE THIS LINE */
+    border-radius: 10px;
+    background-color: #e2a62b;
+
+}
+
+.btn-white:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .card-services {
   min-height: 320px;
 }
@@ -323,6 +372,13 @@ text-align: center;
     max-height: 7rem;
 }
 
+.text-block {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .section-block {
   padding: 2rem 2rem 2rem 2rem;
   font-family: Lato, sans-serif;
@@ -330,7 +386,7 @@ text-align: center;
 }
 
 .section-yellow {
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   background-color: #e2a62b;
   font-family: Lato, sans-serif;
   font-weight: 400;
@@ -376,6 +432,10 @@ text-align: center;
 }
 
 
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
 
 
@@ -558,6 +618,9 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
   .hero {
     width: 100%;
+  }
 
+  .usertopnav {
+    visibility: hidden;
   }
 }

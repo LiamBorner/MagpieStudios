@@ -1,7 +1,4 @@
-<nav class="navbar navbar-expand-sm" style="background-color: #000;">
-  <a class="navbar-brand" href="/">
-    <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
-  </a>
+
   <ul class="navbar-nav ml-auto">
   <% if @logged_out %>
   <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Sign up", "#{new_user_registration_path}" %></a></li>
@@ -27,3 +24,52 @@
   <% end %>
   </ul>
      </nav>
+
+
+     <div class="mobile-nav">
+       <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #000;">
+         <a class="navbar-brand" href="/">
+           <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
+         </a>
+
+         <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+       aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><i
+           class="fas fa-bars fa-1x"></i></button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+         <ul class="navbar-nav ml-auto">
+           <li><a href="#home">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#equipment" >Equipment</a></li>
+           <li><a href="#testimonials" >Testimonials</a></li>
+           <li><a href="#gallery" >Gallery</a></li>
+           <li><a href="#contact" >Contact us</a></li>
+
+
+
+         <% if @logged_out %>
+         <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Sign up", "#{new_user_registration_path}" %></a></li>
+         <li style="padding: 0 1rem 0 1rem"><a><%= link_to "Login", "#{user_session_path}" %></a></li>
+
+         <% end %>
+
+
+         <% if @artist %>
+           <li style="padding: 0 1rem 0 1rem"><%= link_to 'My tracks', tracks_path %></li>
+           <li style="padding: 0 1rem 0 1rem"><%= link_to "Edit my Profile", "#{edit_user_registration_path}" %></li>
+           <li style="padding: 0 1rem 0 1rem"><%= link_to "Back to main site", root_path %></li>
+           <li style="padding: 0 1rem 0 1rem"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+
+            <% end %>
+
+         <% if @admin %>
+             <li style="padding: 0 1rem 0 1rem"><%= link_to "View all tracks", "#{admin_tracks_path}" %></li>
+             <li style="padding: 0 1rem 0 1rem"><%= link_to "Edit my Profile", "#{edit_user_registration_path}" %></li>
+             <li style="padding: 0 1rem 0 1rem"><%= link_to "Back to main site", root_path %></li>
+             <li style="padding: 0 1rem 0 1rem"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+
+         <% end %>
+         </ul>
+           </div>
+            </nav>
+     </div>

@@ -1,5 +1,14 @@
-<%= render "layouts/usertopnav" %>
+<nav class="navbar navbar-expand-sm" style="background-color: #000;">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
+  </a>
+  </nav>
 
+<%= render "layouts/persistenttopnav" %>
+<%= render "layouts/mobilenav" %>
+
+
+<div class="container">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -56,6 +65,7 @@
     <%= f.submit "Update", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>
 
 <h3>Cancel my account</h3>
 

@@ -1,18 +1,24 @@
-<%= render "layouts/usertopnav" %>
+<nav class="navbar navbar-expand-sm" style="background-color: #000;">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/magpielogo.png" class="logo" style="width:80px; vertical-align: middle; ">
+  </a>
+  </nav>
 
 <p id="notice"><%= notice %></p>
 
+<section>
+  <div class="container">
+  <h1>Admin area</h1>
+  <p>Manage your tracks here</p>
+  </div>
 
-
-
-<table style="width:80%;">
+<table>
   <thead>
     <tr>
-      <th>Track name</th>
-      <th>Uploaded at</th>
-      <th></th>
-      <th colspan="2"></th>
-      <th><div style= "btn btn-primary"><%= link_to 'Add new track +', new_track_path %></div> </th>
+      <th scope="col">Track name</th>
+      <th scope="col">Upload date</th>
+      <th scope="col"></th>
+      <th colspan="3" scope="col">Actions</th>
     </tr>
   </thead>
 
@@ -20,16 +26,19 @@
     <% @tracks.each do |track| %>
       <tr>
         <td><%= track.title %></td>
-        <td><%= track.created_at  %></td>
-        <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls'></audio></td>
+        <td><%= track.created_at.strftime("%Y-%m-%d")  %></td>
+        <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls' class="audio"></audio></td>
         <td><%= link_to 'Edit details', edit_admin_track_path(track) %></td>
         <td><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Download', rails_blob_path(track.track_file) %> </td>
       </tr>
     <% end %>
   </tbody>
+  </table>
+</section>
 
-this is some text below the table
-<div>
+<section>
+<div class="container">
 <%= link_to 'Add new track +', new_track_path, class: "btn btn-warning btn-lg" %>
 </div>
+</section>

@@ -1,16 +1,11 @@
 
-
-
       <div  id="sidebar">
 
-        <div style="text-align: center;">
+        <div >
           <a class="navbar-brand" href="#">
-            <img src="/assets/magpielogo.png"  class="logo" style="display:inline-block;">
+            <img src="/assets/magpielogo.png"  class="logo">
           </a>
         </div>
-
-
-
 
         <div style="text-align: center;" >
           <label for="toggle">&#9776;</label>
@@ -22,8 +17,11 @@
                 <a href="#testimonials" >Testimonials</a>
                 <a href="#gallery" >Gallery</a>
                 <a href="#contact" >Contact us</a>
+
+                <% if @logged_out %>
                 <a href="/users/sign_in">Login</a>
                 <a href="/users/sign_up">Sign up</a>
+                <% end %>
               </div>
 
 
@@ -40,7 +38,7 @@
 
   <section id="content">
 
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-inner">
         <h1>Magpie Studios Kent</h1>
         <h2>Analog | Digital Hybrid Recording & Production Studio in Kent</h2>
@@ -55,9 +53,9 @@
 
     <section id="about" class="section-block">
       <h2>About<h2>
-      <p>Purpose-built analog/digital recording &amp; production studio set in the idyllic Kent countryside; creating the perfect escape from everyday life to focus on your record. With the studio teams&#x27; guidance and perseverance you can produce record label quality music.</p>
+      <p class="text-block">Purpose-built analog/digital recording &amp; production studio set in the idyllic Kent countryside; creating the perfect escape from everyday life to focus on your record. With the studio teams&#x27; guidance and perseverance you can produce record label quality music.</p>
 
-    <div class="container">
+    <div>
       <div class="row">
         <div class="col-sm-4">
           <div class="card card-services" style="margin: 0.5rem 0 0.5rem 0">
@@ -95,15 +93,15 @@
 </section>
 <section class="section-yellow">
 <div id="MagpieMastered">
-  <h1>Access your tracks. Any time. Anywhere</h1>
+  <h2>Access your tracks. Any time. Anywhere</h2>
 </div>
   <div class="container">
     <div class="row">
-      <div class="col-sm-8" style="font-color:#000;">
-        When you choose Magpie Studios, you&#x27;ll receive a MagpieMastered account. We&#x27;ll upload mastered tracks to your account, so that you have access, whenever you need them.
+      <div class="col-sm-8" style="font-color:#000; padding-bottom: 2rem; ">
+        When you choose Magpie Studios, you&#x27;ll receive a MagpieMastered account. We&#x27;ll upload mastered tracks to your account, so that you have access to your tracks, whenever you need them.
       </div>
-      <div class="col-sm-4">
-        <%= link_to "Login", "#{user_session_path}", class: "button" %>
+      <div class="col-sm-4" style="text-align: center; vertical-align: center;">
+      <%= link_to "Login", "#{user_session_path}", class: "btn-white" %>
       </div>
     </div>
   </div>
@@ -111,6 +109,9 @@
 </section>
 <section id="equipment" class="section-lightgrey">
     <h2>Outboard equipment, instruments and microphones</h2>
+    <div class="text-block">
+      <p>Whatever equipment you need, we've got you covered. Take a look at what's on offer, and if you need any help, please get in touch.</p>
+    </div>
 
 <div id="accordion">
   <div class="card">
@@ -224,11 +225,10 @@
       </div>
     </div>
   </div>
-  </div>
 </section>
-  <section class="section-darkgrey">
-      <h2 id="testimonials" style="color:#fff !important;">Testimonials</h2>
-      <div>
+  <section id="testimonials" class="section-darkgrey">
+      <h2 style="color:#fff !important;">Testimonials</h2>
+      <div class="text-block">
           <div>
               <p style="color:#fff !important;"><em>&#x27;It was my first time recording and Charlie was very helpful and supportive, my band were recording a 5 track EP and we are very pleased with the result. A great experience.&#x27;</em> Fiona McIntyre via Facebook</p>
           </div>
@@ -239,29 +239,32 @@
   </section>
 
 
-  <section class="section-block">
+  <section id="contact" class="section-block">
   <h2>Get in touch</h2>
+  <div class= "container">
+
   <div>All projects at Magpie Studios Kent are of the highest fidelity at an affordable rate. If you need anymore information or would like to talk about your project, get in contact via the form below. We look forward to working with you.</div>
+  <div style="padding-top:1rem; " >
 
 
-  <div id="contact">
+
     <%= form_for Contact.new do |f| %>
     <div class="form-group">
-      <%= f.label :name %><br />
+      <%= f.label :name, "Name *" %><br />
       <%= f.text_field :name, autocomplete: "email", class: "form-control", :required => true  %>
     </div>
     <div class="form-group">
-      <%= f.label :email %><br />
+      <%= f.label :email, "Email address *" %><br />
       <%= f.email_field :email,  autocomplete: "email", class: "form-control", :required => true  %>
     </div>
     <div class="form-group">
-      <%= f.label :phone_number %><br />
+      <%= f.label :phone_number, "Phone number *" %><br />
       <%= f.text_field :phone_number, autocomplete: "email", class: "form-control", :required => true  %>
     </div>
 
     <div class="form-group">
       <%= f.label :message %><br />
-      <%= f.text_area :message, as: :text  %>
+      <%= f.text_area :message, as: :text, class: "form-control", rows: 5  %>
     </div>
 
     <div class="hidden">
@@ -270,19 +273,22 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-primary" %>
+      <%= f.submit "Send message", class: "btn btn-primary" %>
     </div>
     <% end %>
 
   </div>
+</div>
   </section>
 
 
 
 
-<section id="gallery" class="section-lightgrey">
+<section id="gallery" class="section-lightgrey" >
+  <div >
   <h2>Gallery</h2>
     <%= render "layouts/gallery" %>
+    </div>
 </section>
 
 
