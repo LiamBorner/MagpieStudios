@@ -29,6 +29,14 @@
   visibility: hidden;
 }
 
+.fa-bars {
+  color: white;
+}
+
+.fa-chevron-down {
+    margin-top: 20px;
+}
+
 .nav-top {
   text-align: right;
   height: 70px;
@@ -235,60 +243,70 @@ width:20%;
 text-align: center;
 }
 
+.hero {
+    /* Sizing */
 
+    height: 100vh;
 
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.hero-banner {
-      position: relative;
-      display: block;
-      height: 100%;
-      max-height: auto;
-      background-image: url(https://irp-cdn.multiscreensite.com/418effdf/dms3rep/multi/desktop/15590691_10155512098708942_8757120314579847317_o.jpg), linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
-      background-position: 0px 0px, 0px 0px;
-      background-size: cover, auto;
-      font-family: Lato, sans-serif;
+    /* Text styles */
+    text-align: center;
+    color: white; /* ADD THIS LINE */
+
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.hero-banner-wrapper {
-  position: relative;
-  top: 40%;
-  display: block;
-  overflow: visible;
-  margin-bottom: 0px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #000;
-  opacity: 0.79;
-  -webkit-transition: opacity 775ms ease;
-  transition: opacity 775ms ease;
-  text-align: center;
+.hero h1 {
+    /* Text styles */
+    font-size: 2.5rem;
+
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
-.hero-heading {
-  margin: 0rem 10px 19px;
-font-family: Lato, sans-serif;
-color: #fff;
-font-size: 2rem;
-line-height: 2rem;
-font-weight: 400;
-letter-spacing: 3px;
-
+.hero h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-.hero-subheading {
-  margin-bottom: 25px;
-    font-family: Lato, sans-serif;
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    font-weight: 300;
+.hero h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-.hero-minorheading {
-  font-family: Lato, sans-serif;
-color: #f0f0f0;
-font-size: 1rem;
-line-height: 1.5rem;
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 180px;
+
+    /* Padding and margins */
+    padding: 0.5rem;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Text styles */
+    color: white; /* CHANGE THIS LINE */
+    text-decoration: none;
+    font-size: 1.3rem;
+
+    /* Border styles */
+    border: 2px solid black; /* CHANGE THIS LINE */
+    border-radius: 10px;
+    background-color: #e2a62b;
+
 }
 
 .card-services {
@@ -536,5 +554,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
   .mobile-nav {
     visibility: visible;
+  }
+
+  .hero {
+    width: 100%;
+
   }
 }
