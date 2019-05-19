@@ -221,6 +221,18 @@ td {
   padding: 2rem;
 }
 
+.tracks-table {
+  background-color: black;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+hr {
+  background-color: #fff!important;
+}
 
 
 

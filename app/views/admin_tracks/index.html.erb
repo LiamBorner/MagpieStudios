@@ -11,31 +11,22 @@
   <h1>Admin area</h1>
   <p>Manage your tracks here</p>
   </div>
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Track name</th>
-      <th scope="col">Upload date</th>
-      <th scope="col"></th>
-      <th colspan="3" scope="col">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tracks.each do |track| %>
-      <tr>
-        <td><%= track.title %></td>
-        <td><%= track.created_at.strftime("%Y-%m-%d")  %></td>
-        <td><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls' class="audio"></audio></td>
-        <td><%= link_to 'Edit details', edit_admin_track_path(track) %></td>
-        <td><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Download', rails_blob_path(track.track_file) %> </td>
-      </tr>
-    <% end %>
-  </tbody>
-  </table>
 </section>
+
+<div class="tracks-table">
+<% @tracks.each do |track| %>
+     <div class="row align-items-center">
+     <div class="col-sm"><%=  track.title %></div>
+     <div class="col-sm"><%=  track.user.band_name %></div>
+      <div class="col-sm">Uploaded on <%= track.created_at.strftime("%Y-%m-%d") %></div>
+      <div class="col-sm"><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls' class="audio"></audio></div>
+      <div class="col-sm"><%= link_to 'Edit details', edit_admin_track_path(track) %></div>
+      <div class="col-sm"><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <div class="col-sm"><%= link_to 'Download', rails_blob_path(track.track_file) %></div>
+      </div>
+      <hr />
+      <% end %>
+</div>
 
 <section>
 <div class="container">
