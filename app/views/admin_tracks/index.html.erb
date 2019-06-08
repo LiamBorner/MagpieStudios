@@ -7,29 +7,45 @@
 <p id="notice"><%= notice %></p>
 
 <section>
-  <div class="container">
+  <div class="col-md-6 offset-md-3 container">
   <h1>Admin area</h1>
   <p>Manage your tracks here</p>
   </div>
 </section>
 
-<div class="tracks-table">
-<% @tracks.each do |track| %>
-     <div class="row align-items-center">
-     <div class="col-sm"><%=  track.title %></div>
-     <div class="col-sm"><%=  track.user.band_name %></div>
-      <div class="col-sm">Uploaded on <%= track.created_at.strftime("%Y-%m-%d") %></div>
-      <div class="col-sm"><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls' class="audio"></audio></div>
-      <div class="col-sm"><%= link_to 'Edit details', edit_admin_track_path(track) %></div>
-      <div class="col-sm"><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-      <div class="col-sm"><%= link_to 'Download', rails_blob_path(track.track_file) %></div>
-      </div>
-      <hr />
-      <% end %>
+<div class="col-sm-12">
+  <div class="col-md-6 offset-md-3 tracks-table">
+    <div class="row align-items-center">
+      <div class="col-sm"><strong>Track name</strong></div>
+      <div class="col-sm"><strong>Band name</strong></div>
+      <div class="col-sm"></div>
+      <div class="col-sm"></div>
+      <div class="col-sm"></div>
+      <div class="col-sm"></div>
+    </div>
+    <hr />
+  <% @tracks.each do |track| %>
+       <div class="row align-items-center">
+       <div class="col-sm"><%=  track.title %></div>
+       <div class="col-sm"><%=  track.user.band_name %></div>
+        <div class="col-sm">Uploaded on <%= track.created_at.strftime("%Y-%m-%d") %></div>
+        <div class="col-sm"><audio src= "<%= rails_blob_path(track.track_file) %> " controls='controls' class="audio"></audio></div>
+        <div class="btn-group2">
+          <div class="button2" style="border-radius: 10px 0px 0px 10px;"><%= link_to 'Edit', edit_admin_track_path(track) %></div>
+          <div class="button2"><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div class="button2" style="border-radius: 0px 10px 10px 0px;"><%= link_to 'Download', rails_blob_path(track.track_file) %></div>
+        </div>
+        </div>
+
+        <hr />
+        <% end %>
+  </div>
+
+</div>
 </div>
 
 <section>
-<div class="container">
+<div class="col-md-6 offset-md-3" style="margin-top: 1rem;">
 <%= link_to 'Add new track +', new_track_path, class: "btn btn-warning btn-lg" %>
 </div>
 </section>

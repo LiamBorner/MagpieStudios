@@ -35,9 +35,6 @@
   color: white;
 }
 
-.fa-chevron-down {
-    margin-top: 20px;
-}
 
 .nav-top {
   text-align: right;
@@ -50,11 +47,17 @@
   display: block!important;
 }
 
+.menu-left {
+  margin-top: 30%;
+}
+
 .menu-left a {
   margin: 0 0 0 0;
   display: block!important;
   text-align: center;
-  line-height: 2rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 .menu-top a {
@@ -124,6 +127,7 @@ a:visited {
 .logo {
   width: 100%;
   align-self: center;
+  padding: 1rem;
 }
 
 .nav-link {
@@ -228,6 +232,11 @@ td {
   padding-right: 1rem;
   text-align: center;
   color: #fff;
+}
+
+.tracks-table .col-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 hr {
@@ -336,7 +345,7 @@ text-align: center;
     font-size: 1.3rem;
 
     /* Border styles */
-    border: 2px solid black; /* CHANGE THIS LINE */
+     /* CHANGE THIS LINE */
     border-radius: 10px;
     background-color: #e2a62b;
 
@@ -349,14 +358,14 @@ text-align: center;
 
     /* Padding and margins */
     padding: 1rem;
-    vertical-align: center;
-    margin-left: auto;
-    margin-right: auto;
+
 
     /* Text styles */
     color: white; /* CHANGE THIS LINE */
     text-decoration: none;
     font-size: 1rem;
+    text-align: center;
+
 
     /* Border styles */
     border: 1.5px solid white; /* CHANGE THIS LINE */
@@ -370,6 +379,37 @@ text-align: center;
   text-decoration: none;
 }
 
+.btn-group2 {
+  margin-right: 10px;
+}
+
+.btn-group2 .button2 {
+  background-color: #ffc107; /* Green background */
+  border: 1px solid #ffc107; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group2 .button2:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group2:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group2 .button2:hover {
+  background-color: #ffc177;
+}
+
+
+
 .card-services {
   min-height: 320px;
 }
@@ -382,6 +422,11 @@ text-align: center;
     text-align: left;
     justify-content: center;
     max-height: 7rem;
+    margin-top: 1rem;
+}
+
+.card-body {
+  padding: 2rem;
 }
 
 .text-block {
@@ -628,6 +673,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
     visibility: visible;
   }
 
+  .desktop-nav  {
+    visibility: hidden;
+  }
+
   .hero {
     width: 100%;
   }
@@ -635,4 +684,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .usertopnav {
     visibility: hidden;
   }
+
+  .btn-group2 {
+    margin-left: 8%;
+  }
+
+  .card-services {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
 }

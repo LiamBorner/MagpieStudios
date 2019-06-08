@@ -1,6 +1,5 @@
 
       <div  id="sidebar">
-
         <div >
           <a class="navbar-brand" href="#">
             <img src="/assets/magpielogo.png"  class="logo">
@@ -23,9 +22,6 @@
                 <a href="/users/sign_up">Sign up</a>
                 <% end %>
               </div>
-
-
-
         <div>
           <div class="footer">
               <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="25" height="25" alt="" /></a>
@@ -46,19 +42,22 @@
         <a class="btn" href="#contact" role="button">Contact us</a>
 
         <i
-          class="fas fa-chevron-down fa-2x"></i>
+          class="fas fa-chevron-down fa-2x" style="margin-top: 20px;"></i>
       </div>
 
   </section>
 
     <section id="about" class="section-block">
-      <h2>About<h2>
-      <p class="text-block">Purpose-built analog/digital recording &amp; production studio set in the idyllic Kent countryside; creating the perfect escape from everyday life to focus on your record. With the studio teams&#x27; guidance and perseverance you can produce record label quality music.</p>
+      <div class="col-md-6 offset-md-3">
 
-    <div>
+      <h2>About<h2>
+      <p>Purpose-built analog/digital recording &amp; production studio set in the idyllic Kent countryside; creating the perfect escape from everyday life to focus on your record. With the studio teams&#x27; guidance and perseverance you can produce record label quality music.</p>
+    </div>
+
+      <div class="col-md-12">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="card card-services" style="margin: 0.5rem 0 0.5rem 0">
+        <div class="col-md-4">
+          <div class="card card-services">
             <img class="card-img-top" src="/assets/console.svg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Studio day hire</h5>
@@ -66,8 +65,8 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class=" card card-services" style="margin: 0.5rem 0 0.5rem 0">
+        <div class="col-md-4">
+          <div class=" card card-services">
             <img class="card-img-top" src="/assets/mic.svg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Per Hour Hire</h5>
@@ -75,8 +74,8 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card card-services" style="margin: 0.5rem 0 0.5rem 0">
+        <div class="col-md-4">
+          <div class="card card-services">
             <img class="card-img-top" src="/assets/camera.svg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Audio / Video Packages</h5>
@@ -86,40 +85,48 @@
         </div>
       </div>
       </div>
+
     </section>
 
 <section class="section-darkgrey">
+  <div class="col-md-8 offset-md-2">
+
     <div class="cta-text">Session musicians are available on request. Please get in contact for quotes</div>
+    </div>
 </section>
-<section class="section-yellow">
-<div id="MagpieMastered">
-  <h2>Access your tracks. Any time. Anywhere</h2>
-</div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8" style="font-color:#000; padding-bottom: 2rem; ">
-        When you choose Magpie Studios, you&#x27;ll receive a MagpieMastered account. We&#x27;ll upload mastered tracks to your account, so that you have access to your tracks, whenever you need them.
-      </div>
-      <div class="col-sm-4" style="text-align: center; vertical-align: center;">
-      <%= link_to "Login", "#{user_session_path}", class: "btn-white" %>
-      </div>
+
+<section class="section-yellow col-md-12">
+  <div class="col-md-6 offset-md-3">
+    <div id="MagpieMastered">
+      <h2>Access your tracks. Any time. Anywhere</h2>
+    </div>
+    <div class="row" style="padding-top: 1rem;">
+        <div class="col-md-8" style="font-color:#000; padding-bottom: 2rem; ">
+            When you choose Magpie Studios, you&#x27;ll receive a MagpieMastered account. We&#x27;ll upload mastered tracks to your account, so that you have access to your tracks, whenever you need them.
+        </div>
+        <div class="col-md-4">
+          <%= link_to "Login", "#{user_session_path}", class: "btn-white" %>
+        </div>
     </div>
   </div>
-
 </section>
 <section id="equipment" class="section-lightgrey">
-    <h2>Outboard equipment, instruments and microphones</h2>
-    <div class="text-block">
-      <p>Whatever equipment you need, we've got you covered. Take a look at what's on offer, and if you need any help, please get in touch.</p>
-    </div>
+  <div class="col-md-8 offset-md-2">
 
+    <h2>Outboard equipment, instruments and microphones</h2>
+
+      <p>Whatever equipment you need, we've got you covered. Take a look at what's on offer, and if you need any help, please get in touch.</p>
+
+  </div>
+  <div class="col-md-8 offset-md-2">
 <div id="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <div class="accordion-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Outboard and preamps
+          Outboard and preamps<i class="fas fa-chevron-down" style="float:right;"></i>
         </div>
+
       </h5>
     </div>
 
@@ -146,7 +153,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <div class="accordion-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          In-house instruments and amps
+          In-house instruments and amps<i class="fas fa-chevron-down" style="float:right;"></i>
         </div>
       </h5>
     </div>
@@ -173,7 +180,7 @@
   <div class="card">
     <div class="card-header" id="headingThree">
       <h5 class="mb-0">
-        <div class="accordion-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Microphones</div>
+        <div class="accordion-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Microphones<i class="fas fa-chevron-down" style="float:right;"></i></div>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -198,10 +205,11 @@
       </div>
     </div>
     </div>
+
     <div class="card">
       <div class="card-header" id="headingFour">
         <h5 class="mb-0">
-          <div class="accordion-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Monitoring , console and software</div>
+          <div class="accordion-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Monitoring, console and software<i class="fas fa-chevron-down" style="float:right;"></i></div>
         </h5>
       </div>
       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
@@ -225,28 +233,28 @@
       </div>
     </div>
   </div>
+  </div>
+
 </section>
   <section id="testimonials" class="section-darkgrey">
+    <div class="col-md-6 offset-md-3">
       <h2 style="color:#fff !important;">Testimonials</h2>
-      <div class="text-block">
-          <div>
-              <p style="color:#fff !important;"><em>&#x27;It was my first time recording and Charlie was very helpful and supportive, my band were recording a 5 track EP and we are very pleased with the result. A great experience.&#x27;</em> Fiona McIntyre via Facebook</p>
-          </div>
+      <div>
+          <p style="color:#fff !important;"><em>&#x27;It was my first time recording and Charlie was very helpful and supportive, my band were recording a 5 track EP and we are very pleased with the result. A great experience.&#x27;</em> Fiona McIntyre via Facebook</p>
           <p style="color:#fff !important;"><em>&#x27;What an amazing experience. Very thorough and professional. The recording sessions were a lot of fun and the end mix better than I could of imagined&#x27;</em> Tom Proctor via Facebook</p>
           <p style="color:#fff !important;"><em>&#x27;Our band, Northern Beauty, recently recorded our first EP at Magpie Studios. The results were excellent and have given us a collection of recorded songs that we are proud of. Great to work with and offers really good value for money.. we will be back, that&#x27;s for sure. All the guys at NB&#x27;</em> Jason Mannion via Facebook</p>
+      </div>
       </div>
 
   </section>
 
 
   <section id="contact" class="section-block">
-  <h2>Get in touch</h2>
-  <div class= "container">
-
-  <div>All projects at Magpie Studios Kent are of the highest fidelity at an affordable rate. If you need anymore information or would like to talk about your project, get in contact via the form below. We look forward to working with you.</div>
-  <div style="padding-top:1rem; " >
-
-
+    <div class="col-md-8 offset-md-2" style="margin-bottom: 1rem;">
+      <h2>Get in touch</h2>
+      <p>All projects at Magpie Studios Kent are of the highest fidelity at an affordable rate. If you need anymore information or would like to talk about your project, get in contact via the form below. We look forward to working with you.</p>
+  </div>
+  <div class="col-md-6 offset-md-3 card" style="padding-top:1rem; " >
 
     <%= form_for Contact.new do |f| %>
     <div class="form-group">
@@ -277,22 +285,29 @@
     </div>
     <% end %>
 
+    <br />
+
   </div>
-</div>
   </section>
 
 
 
 
 <section id="gallery" class="section-lightgrey" >
-  <div >
+  <div class="col-md-8 offset-md-2" style="margin-bottom: 1rem;">
   <h2>Gallery</h2>
+  </div>
+  <div class="col-md-12" style="margin-bottom: 1rem;">
+
     <%= render "layouts/gallery" %>
     </div>
 </section>
 
 
 <section class="section-block">
+  <div class="col-md-8 offset-md-2" style="margin-bottom: 1rem;">
+
   <h2>Where to find us</h2>
+  </div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.732074039342!2d0.7606261512972395!3d51.13184987947501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ded889720cdb31%3A0xca9a6a23a3a30a3f!2sMagpie+Studios+Kent!5e0!3m2!1sen!2sje!4v1557400550286!5m2!1sen!2sje" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
