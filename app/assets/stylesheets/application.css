@@ -16,6 +16,8 @@
 
  * {
      -webkit-overflow-scrolling: touch;
+     overflow-x: hidden;
+
  }
 
  html, body {
