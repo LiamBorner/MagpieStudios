@@ -1,4 +1,4 @@
-<div style="background-color: #000;">
+<div class="fixed-top" style="background-color: #000;">
   <a href="/">
     <img src="/assets/magpielogo.png" class="logo" style="width:80px; ">
   </a>
@@ -6,7 +6,9 @@
 
 <%= render "layouts/persistenttopnav" %>
 <%= render "layouts/mobilenav" %>
-  <div class="content" style="padding-top: 2rem">
+
+
+  <div class="content" style="margin-top: 10%;">
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
