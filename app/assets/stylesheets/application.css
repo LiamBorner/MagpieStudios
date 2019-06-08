@@ -23,6 +23,8 @@
    height: 100%;
    margin: 0;
    scroll-behavior: smooth;
+   overflow-x: hidden;
+
  }
 
 
@@ -685,9 +687,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
     visibility: hidden;
   }
 
-  .btn-group2 {
-    margin-left: 8%;
-  }
+
 
   .card-services {
     margin-top: 0.5rem;
