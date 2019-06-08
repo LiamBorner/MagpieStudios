@@ -47,10 +47,10 @@
 
   </section>
 
-    <section id="about" class="section-block">
+    <section  class="section-block">
       <div class="col-md-6 offset-md-3">
 
-      <h2>About<h2>
+      <h2 id="about">About<h2>
       <p>Purpose-built analog/digital recording &amp; production studio set in the idyllic Kent countryside; creating the perfect escape from everyday life to focus on your record. With the studio teams&#x27; guidance and perseverance you can produce record label quality music.</p>
     </div>
 
@@ -293,9 +293,9 @@
 
 
 
-<section id="gallery" class="section-lightgrey" >
-  <div class="col-md-8 offset-md-2" style="margin-bottom: 1rem;">
-  <h2>Gallery</h2>
+<section  class="section-lightgrey" >
+  <div  class="col-md-8 offset-md-2" style="margin-bottom: 1rem;">
+  <h2 id="gallery">Gallery</h2>
   </div>
   <div class="col-md-12" style="margin-bottom: 1rem;">
 
@@ -311,3 +311,45 @@
   </div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.732074039342!2d0.7606261512972395!3d51.13184987947501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ded889720cdb31%3A0xca9a6a23a3a30a3f!2sMagpie+Studios+Kent!5e0!3m2!1sen!2sje!4v1557400550286!5m2!1sen!2sje" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
+
+<script>
+
+
+    // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+
+    </script>
