@@ -18,8 +18,7 @@
  // @import "bootstrap";
 
  * {
-   overflow-y: scroll; /* has to be scroll, not auto */
--webkit-overflow-scrolling: touch;
+
      // overflow-x: hidden;
 
  }
@@ -29,8 +28,13 @@
    height: 100%;
    margin: 0;
    scroll-behavior: smooth;
-
  }
+
+html {
+  overflow-y: scroll; /* has to be scroll, not auto */
+-webkit-overflow-scrolling: touch;
+}
+
 
 .mobile-nav {
   visibility: hidden;
