@@ -675,8 +675,12 @@ Remove or comment-out the code block below to see how the browser will fall-back
   }
 
   #content {
-    width: 100%;
-  }
+  
+width:auto;
+max-width:auto;
+padding:0 1em;
+margin:9px;
+}
 
   .mobile-nav {
     visibility: visible;
