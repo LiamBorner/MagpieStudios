@@ -18,7 +18,8 @@
  // @import "bootstrap";
 
  * {
-     -webkit-overflow-scrolling: touch;
+   overflow-y: scroll; /* has to be scroll, not auto */
+-webkit-overflow-scrolling: touch;
      // overflow-x: hidden;
 
  }
