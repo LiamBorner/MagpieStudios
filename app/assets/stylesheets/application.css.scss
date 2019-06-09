@@ -19,7 +19,7 @@
 
  * {
 
-     // overflow-x: hidden;
+     overflow-x: hidden;
 
  }
 
@@ -31,7 +31,7 @@
  }
 
 html {
-  overflow-y: scroll; /* has to be scroll, not auto */
+  // overflow-y: scroll; /* has to be scroll, not auto */
 -webkit-overflow-scrolling: touch;
 }
 
@@ -254,20 +254,20 @@ hr {
 
 
 
-#sidebar, #content {
+.sidebar, .content {
   height: 100%;
   overflow:auto;
   float:left;
   /* transition: width .35s; */
 }
 
-#sidebar {
+.sidebar {
   background:#000;
   width: 20%;
 }
 
 
-#content {
+.content {
 
   width: 80%;
 }
@@ -668,18 +668,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 
 @media screen and (max-width: 400px) {
-  #sidebar {
+  .sidebar {
     text-align: center;
     float: none;
     visibility: hidden;
+    display: none;
   }
 
-  #content {
-  
-width:auto;
-max-width:auto;
-padding:0 1em;
-margin:9px;
+  .content {
+    width:100%;
+    max-width:100%;
+
 }
 
   .mobile-nav {
