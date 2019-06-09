@@ -24,7 +24,7 @@
       <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-<!-- 
+<!--
     <link rel="stylesheet" media="all" href="/assets/base/bootstrap.css"  type="text/css">
     <link rel="stylesheet" media="all" href="/assets/base/normalize.css"  type="text/css">
     <link rel="stylesheet" media="all" href="/assets/base/scrolling-nav.css"  type="text/css"> -->
@@ -62,9 +62,11 @@
         <%= render "layouts/header" %>
       </div>
 
+      
     <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-secondary", html: {position: "absolute"}) %>
+      <%= content_tag(:div, msg, class: "alert alert-success alert-fixed fade-in") %>
       <% end %>
+
 
 
 
