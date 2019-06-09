@@ -30,6 +30,8 @@
    scroll-behavior: smooth;
  }
 
+
+
 html {
   // overflow-y: scroll; /* has to be scroll, not auto */
 -webkit-overflow-scrolling: touch;
@@ -702,6 +704,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .card-services {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
 }
