@@ -68,4 +68,4 @@ gem 'instagram'
 gem 'css3-progress-bar-rails'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'aws-sdk', '~> 2'
+gem "aws-sdk-s3", require: false
