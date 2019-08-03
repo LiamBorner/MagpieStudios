@@ -1,0 +1,80 @@
+
+      <div class="sidebar">
+        <div >
+          <a class="navbar-brand" href="#">
+            <img src="/assets/magpielogo.png"  class="logo">
+          </a>
+        </div>
+
+        <div style="text-align: center;" >
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle"/>
+            <div class="menu-left">
+                <a href="/">Home</a>
+                <a href="/">About</a>
+                <a href="/" >Equipment</a>
+                <a href="/" >Testimonials</a>
+                <a href="/" >Gallery</a>
+                <a href="/" >Contact us</a>
+
+                <% if @logged_out %>
+                <a href="/users/sign_in">Login</a>
+                <a href="/users/sign_up">Sign up</a>
+                <% end %>
+              </div>
+        <div>
+          <div class="footer">
+              <a href="https://www.facebook.com/MagpieStudiosKent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90485534fd98_social-03-white.svg" width="25" height="25" alt="" /></a>
+              <a href="https://www.instagram.com/magpiestudioskent/" target="_blank" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc904ae834fd8b_social-08-white.svg" width="25" height="25" alt="" /></a>
+              <a href="mailto:info@magpiestudioskent.com?subject=Contact%20from%20website" style="padding: 0 0.5rem 0 0.5rem"><img src="https://uploads-ssl.webflow.com/5c463a3854bc908a0034fd43/5c463a3854bc90381b34fd94_social-30-white.svg" width="25" height="25" alt="" /></a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+<section class="content">
+
+<h2>Privacy policy</h2>
+</section>
+
+<script>
+
+
+    // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+
+    </script>
