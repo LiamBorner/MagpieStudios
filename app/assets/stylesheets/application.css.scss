@@ -195,7 +195,9 @@ a:visited {
     width: 100%;
 }
 
-
+#equipmentAccordionMobile {
+  display: none;
+}
 
 
 
@@ -700,6 +702,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
     text-align: center;
     float: none;
     visibility: hidden;
+    display: none;
+  }
+
+  #equipmentAccordionMobile {
+    display: block;
+  }
+
+  #equipmentAccordion{
     display: none;
   }
 
