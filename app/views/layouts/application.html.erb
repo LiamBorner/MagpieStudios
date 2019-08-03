@@ -52,6 +52,15 @@
                 }(window, document);
             </script>
 
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145078092-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-145078092-1');
+            </script>
 
 
         </head>
@@ -62,7 +71,7 @@
         <%= render "layouts/header" %>
       </div>
 
-      
+
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-success alert-fixed fade-in") %>
       <% end %>
