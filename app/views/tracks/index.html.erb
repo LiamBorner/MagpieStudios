@@ -6,8 +6,20 @@
 
 <p id="notice"><%= notice %></p>
 
-<h2><%= current_user.name %>: Tracks</h2>
 
-<p>This is where you'll find all of your tracks</p>
+  <div class="col-md-12">
+  <div class="card" style="margin-top:75px;">
+    <div>
+    <h2 class="card-header" style="padding-top:10px;"><%= current_user.name %>: tracks
+</h2>
+    <div class="card-body">Listen and download your tracks here</div>
+    </div>
+    <div style="padding:1rem; ">
+    <%= render "layouts/tracklist" %>
 
-<%= render "layouts/tracklist" %>
+<% if @admin %>
+  <div style="margin-top: 1rem;">
+  <%= link_to 'Add new track +', new_track_path, class: "btn btn-warning btn-lg" %>
+  </div>
+  <% end %>
+  </div>
